@@ -11,6 +11,7 @@ const Container = (props) => {
                 userList.map(user => <SingleUser 
                     key={user.id.toString()} 
                     user={user}
+                    friendList = {props.friendList}
                     addFriendButton={props.addFriendButton}
                     ></SingleUser>
                 )

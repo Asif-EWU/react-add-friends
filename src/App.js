@@ -26,7 +26,7 @@ function App() {
     <div>
       <Header></Header>
       <div className="body-part">
-        <Container data={userList} addFriendButton={addFriend}></Container>
+        <Container data={userList} friendList={friendList} addFriendButton={addFriend}></Container>
         <FriendInfo friendList={friendList} deleteFriendButton={deleteFriend}></FriendInfo>
       </div>
       <Footer></Footer>
