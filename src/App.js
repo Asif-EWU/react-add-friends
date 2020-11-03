@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Container from './Container/Container';
+import FriendInfo from './FriendInfo/FriendInfo';
+import fakedata from './fakedata/userList.js';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
 
 function App() {
+  const userList = fakedata.slice(0, 20);
+  const [friendList, setFriendList] = useState([]);
+  
+  const addFriend = (newFriend) => {
+    if(!friendList.find(friend => newFriend === friend)) {
+      const newFriendList = [...friendList, newFriend];
+      setFriendList(newFriendList);
+    }
+  };
+
+  const deleteFriend = (friendToDelete) => {
+    const newFriendList = friendList.filter(friend => friend !== friendToDelete);
+    setFriendList(newFriendList);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <div className="body-part">
+        <Container data={userList} addFriendButton={addFriend}></Container>
+        <FriendInfo friendList={friendList} deleteFriendButton={deleteFriend}></FriendInfo>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }

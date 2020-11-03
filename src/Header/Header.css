@@ -1,0 +1,22 @@
+.navbar {
+    background-color: rgb(87, 87, 133);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.header-ul {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.header-ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.title {
+    margin-left: 20px;
+}

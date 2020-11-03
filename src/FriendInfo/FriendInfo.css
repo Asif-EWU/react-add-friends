@@ -1,0 +1,10 @@
+.friend-list {
+    position: sticky;
+    top: 10px;
+    margin-left: 15px;
+}
+
+.friend-list ul {
+    list-style-type: none;
+    padding: 0;
+}

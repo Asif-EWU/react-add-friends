@@ -1,0 +1,17 @@
+.single-user {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    border: 5px solid lightgrey;
+    border-top: none;
+    border-left: none;
+    border-radius: 20px;
+    box-shadow: 5px 20px 20px lightgrey;
+    margin-bottom: 20px;
+}
+img {
+    width: 250px;
+}
+.user-info {
+    margin: 10px;
+}

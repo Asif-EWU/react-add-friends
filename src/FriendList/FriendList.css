@@ -1,0 +1,23 @@
+.friend-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.friend-list-item img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: rgb(205, 208, 211);
+}
+
+.friend-list-item p {
+    display: block;
+    width: 70%;
+    margin-right: 20px;
+}
+
+.friend-list-item button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
